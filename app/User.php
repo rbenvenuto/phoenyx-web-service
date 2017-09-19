@@ -36,4 +36,14 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Contact');
     }
+
+    public function tasks()
+    {
+        return $this->belongsToMany('App\Task', 'tasks_users', 'user_ID', 'task_ID');
+    }
+
+    public function notes()
+    {
+        $this->hasMany('App\Note');
+    }
 }

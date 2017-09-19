@@ -15,4 +15,14 @@ class Note extends Model
         'contact_ID',
         'created_by_ID'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    public function contacts()
+    {
+        return $this->belongsTo('App\Contact');
+    }
 }

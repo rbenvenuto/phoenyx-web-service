@@ -39,4 +39,14 @@ class Contact extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function tasks()
+    {
+        return $this->belongsToMany('App\Task', 'contacts_tasks', 'contact_ID', 'task_ID');
+    }
+
+    public function notes()
+    {
+        return $this->hasMany('App\Note');
+    }
 }
