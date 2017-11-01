@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('teste', function(){
-    return response("FUNCIONA ESSA PORRA MLK", 200);
+    return response("Teste de funcionamento", 200);
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
